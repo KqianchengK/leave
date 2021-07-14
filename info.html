@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>请假</title>
+		<link rel="stylesheet" type="text/css" href="qingjia/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/common.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/mui.picker.min.css">
+		<script>
+			var YY, MM, DD, date;
+			window.onload = function() {
+				date = new Date();
+				YY = date.getFullYear();
+				MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+				DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+				var hh = (date.getHours() < 10 ? '0' + date.getHours()  : date.getHours() );
+				var HH = date.getHours()+2;
+				HH = HH<10?'0'+HH:HH;
+				var start = YY + "-" + MM + "-" + DD + " " + (hh) + ":" + "00";
+				var end = YY + "-" + MM + "-" + DD + " " + (HH) + ":" + "00";
+				if(localStorage.getItem("name")!=null){
+					document.getElementById("name").setAttribute("value", localStorage.getItem("name"));
+				}
+				if(localStorage.getItem("number")!=null){
+					document.getElementById("number").setAttribute("value", localStorage.getItem("number"));
+				}
+				if(localStorage.getItem("tel")!=null){
+					document.getElementById("tel").setAttribute("value", localStorage.getItem("tel"));
+				}
+				
+				if(localStorage.getItem("academic")!=null){
+					document.getElementById("academic").setAttribute("value", localStorage.getItem("academic"));
+				}
+				if(localStorage.getItem("major")!=null){
+					document.getElementById("major").setAttribute("value", localStorage.getItem("major"));
+				}
+				if(localStorage.getItem("reason")!=null){
+					document.getElementById("reason").setAttribute("value", localStorage.getItem("reason"));
+				}
+				if(localStorage.getItem("cla")!=null){
+					
+					document.getElementById("cla").setAttribute("value", localStorage.getItem("cla"));
+				}
+				for (var i = 0; i < document.getElementById("type").options.length; i++) {
+					if (document.getElementById("type").options[i].text == localStorage.getItem("type")) {
+						document.getElementById("type").options[i].selected = true;
+						break;
+					}
+				}
+				//document.getElementById("type").setAttribute("value", localStorage.getItem("type"));
+				if(localStorage.getItem("lead")!=null){
+					document.getElementById("lead").setAttribute("value", localStorage.getItem("lead"));
+				}
+				if(localStorage.getItem("place")!=null){
+					document.getElementById("place").setAttribute("value", localStorage.getItem("place"));
+				}
+				if(localStorage.getItem("parents")!=null){
+					document.getElementById("parents").setAttribute("value", localStorage.getItem("parents"));
+				}
+				if(localStorage.getItem("parentsTel")!=null){
+					document.getElementById("parentsTel").setAttribute("value", localStorage.getItem("parentsTel"));
+				}
+				if (localStorage.getItem("monthANDday") == MM + "" + DD) {
+					document.getElementById("startTime").setAttribute("value", localStorage.getItem("startTime"));
+					document.getElementById("endTime").setAttribute("value", localStorage.getItem("endTime"));
+					document.getElementById("yanzheng").setAttribute("value", localStorage.getItem("yanzheng"));
+				} else {
+					document.getElementById("startTime").setAttribute("value", start);
+					document.getElementById("endTime").setAttribute("value", end);
+				}
+			}
+
+			function store() {
+				localStorage.setItem("monthANDday", MM + "" + DD);
+				var name = document.getElementById("name").value;
+				var number = document.getElementById("number").value;
+				var reason = document.getElementById("reason").value;
+				var academic = document.getElementById("academic").value;
+				var major = document.getElementById("major").value;
+				var cla = document.getElementById("cla").value;
+				var startTime = document.getElementById("startTime").value;
+				var endTime = document.getElementById("endTime").value;
+				var lead = document.getElementById("lead").value;
+				var type = document.getElementById("type").value;
+				var tel = document.getElementById("tel").value;
+				var parents = document.getElementById("parents").value;
+				var chengwei = document.getElementById("chengwei").value;
+				var parentsTel = document.getElementById("parentsTel").value;
+				var place = document.getElementById("place").value;
+				localStorage.setItem("name", name);
+				localStorage.setItem("number", number);
+				localStorage.setItem("reason", reason);
+				localStorage.setItem("academic", academic);
+				localStorage.setItem("major", major);
+				localStorage.setItem("cla", cla);
+				localStorage.setItem("startTime", startTime);
+				localStorage.setItem("endTime", endTime);
+				localStorage.setItem("lead", lead);
+				localStorage.setItem("type", type);
+				localStorage.setItem("tel", tel);
+				localStorage.setItem("parents", parents);
+				localStorage.setItem("parentsTel", parentsTel);
+				localStorage.setItem("place", place);
+				localStorage.setItem("chengwei", chengwei);
+				window.location = "qingjiajilu.html";
+			}
+		</script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="display: none;"></a>
+			<h1 class="mui-title">请假</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group" role="form">
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<input type="text" class="required" id="name" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>学号</label>
+					<input type="text" class="required" id="number" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>请假类型</label>
+					<select id="type" class="required">
+						<option value="病假">病假</option>
+						<option value="事假">事假</option>
+						<option value="考试面试">考试面试</option>
+						<option value="其他" selected="selected">其他</option>
+					</select>
+				</div>
+				<div class="mui-input-row">
+					<label>请假原因</label>
+					<input type="text" class="required" id="reason" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>个人联系方式</label>
+					<input type="text" class="required" id="tel" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>学院</label>
+					<input type="text" class="required" id="academic" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>专业</label>
+					<input type="text" class="required" id="major" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>班级</label>
+					<input type="text" class="required" id="cla" placeholder="">
+				</div>
+				<div class="mui-input-row">
+					<label>去向详址</label>
+					<input type="text" class="required" id="place">
+				</div>
+				<div class="mui-input-row">
+					<label>开始时间</label>
+					<input type="text" class="required" id="startTime">
+				</div>
+				<div class="mui-input-row">
+					<label>结束时间</label>
+					<input type="text" class="required" id="endTime">
+				</div>
+				
+				<div class="mui-input-row">
+					<label>辅导员姓名</label>
+					<input type="text" class="required" id="lead">
+				</div>
+				<div class="mui-input-row">
+					<label>家长姓名</label>
+					<input type="text" class="required" id="parents">
+				</div>
+				<div class="mui-input-row">
+					<label>家长称谓</label>
+					<select id="chengwei" class="required">
+						<option value="父亲" selected="selected">父亲</option>
+						<option value="母亲">母亲</option>
+						<option value="其他" >其他</option>
+					</select>
+				</div>
+				<div class="mui-input-row">
+					<label>家庭电话</label>
+					<input type="text" class="required" id="parentsTel">
+				</div>
+				<!-- <div class="mui-input-row" style  = "display: none;">
+					<label>身份验证</label>
+					<input type="text" class="required" id="yanzheng" placeholder="身份验证">
+				</div> -->
+				<div class="mui-content-padded">
+
+					<button type="button" class="mui-btn mui-btn-block mui-btn-primary" onclick="store()">提交</button>
+					
+				</div>
+				
+			</form>
+		</div>
+
+	</body>
+</html>

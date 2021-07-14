@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0049)http://sztoutiao.shzu.edu.cn/rcsw_gxqtQingJialist -->
+<html lang="en" style="font-size: 37.5px;">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+		<link rel="icon" href="http://sztoutiao.shzu.edu.cn/favicon.ico">
+		<title>石大头条</title>
+		<link href="qingjia/chunk-vendors.ffaf8156.css" rel="stylesheet">
+		<link href="qingjia/app.4be6ac44.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-76f8b28a.ac104f2f.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-7fe0b63a.9f3978e8.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-60f9720e.6b71fe4c.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-3c432688.b6fb9269.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-713d77da.4a0b686a.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-11824fde.0a7524ba.css">
+		<script charset="utf-8" src="qingjia/chunk-76f8b28a.51a0179a.js.%e4%b8%8b%e8%bd%bd"></script>
+		<script charset="utf-8" src="qingjia/chunk-7fe0b63a.712461bc.js.%e4%b8%8b%e8%bd%bd"></script>
+		<script charset="utf-8" src="qingjia/chunk-582ea4ce.ed90db23.js.%e4%b8%8b%e8%bd%bd"></script>
+		<script charset="utf-8" src="qingjia/chunk-60f9720e.c87ecca2.js.%e4%b8%8b%e8%bd%bd"></script>
+		<script charset="utf-8" src="qingjia/chunk-3c432688.590301cf.js.%e4%b8%8b%e8%bd%bd"></script>
+	</head>
+	<body style="font-size: 24px;" class=""><noscript><strong>We're sorry but 石大头条 doesn't work properly without
+				JavaScript enabled. Please enable it to continue.</strong></noscript>
+		<div id="app">
+			<div data-v-89147bcc="" id="gxqtlist">
+				<header data-v-89147bcc="" class="mainHeader">
+					<div class="top_bar">
+						<div class="abs_l" ><a data-v-89147bcc="" class="icon-back" href="javascript:window.opener=null;window.open('','_self');window.close();"></a></div>
+						<div class="abs_m">请假记录</div>
+						<div class="abs_r" onclick = "add()"><a class="more_btn icon-menu" ></a>
+							<ul id="headermenulist" class="menulist" style="display: none;">
+								<li data-v-89147bcc="" onclick="window.location.href='info.html'"><i data-v-89147bcc="" class="icon-add" ></i>新增</li>
+								<li data-v-89147bcc=""><i data-v-89147bcc="" class="icon-search"></i>搜索</li>
+								<li data-v-89147bcc=""><i data-v-89147bcc="" class="icon-refresh"></i>刷新</li>
+								<li data-v-89147bcc=""><i data-v-89147bcc="" class="icon-back"></i>返回</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div class="van-overlay" style="z-index: 2004; display: none;"></div>
+
+				<div data-v-89147bcc="" class="gxqtlist-content">
+					<div data-v-89147bcc="" class="van-pull-refresh">
+						<div class="van-pull-refresh__track" style="transition-duration: 300ms;">
+							<div class="van-pull-refresh__head"></div>
+							<div data-v-89147bcc="" role="feed" class="van-list">
+								<div data-v-89147bcc="" class="gxqtlist-item" >
+									<div data-v-89147bcc="" class="gxqtlist-item__right">
+										<div data-v-89147bcc="" class="gxqtlist-item__right-status"
+											style="color: rgb(16, 128, 1); font-weight: bold;">审核通过</div>
+									</div>
+									<div onclick = "window.location.href = 'qingjia.html'">
+									<div data-v-89147bcc="" id="name" class="gxqtlist-item__title" style="width: 75%;">
+										周泰龙</div>
+										
+									<div data-v-89147bcc="" class="gxqtlist-item__desc"><span
+											data-v-89147bcc="">学号:</span><span id="number"> </span><span
+											data-v-89147bcc=""> 电话:</span><a data-v-89147bcc="" id="tel"></a>
+									</div>
+									<div data-v-89147bcc="" class="gxqtlist-item__desc"><span
+											data-v-89147bcc="">所在班级:</span><span id="cla"></span></div>
+									<div data-v-89147bcc="" class="gxqtlist-item__desc"><span
+											data-v-89147bcc="">请假原因:</span><span id="reason"></span></div>
+									<div data-v-89147bcc="" class="gxqtlist-item__desc"><span
+											data-v-89147bcc="">请假开始时间:</span><span id="startTime"></span></div>
+									<div data-v-89147bcc="" class="gxqtlist-item__desc"><span
+											data-v-89147bcc="">结束时间:</span><span id="endTime"></span></div>
+											</div>
+									<div data-v-89147bcc="" class="gxqtlist-item__opt">
+										<div data-v-89147bcc="" class="gxqtlist-item__opt-li" onclick="xiaojiadiv()">
+											<!---->
+											<!----><button data-v-89147bcc=""
+												class="van-button van-button--info van-button--small van-button--plain van-button--hairline van-hairline--surround"
+												style="color: rgb(68, 122, 213); border-color: rgb(68, 122, 213);">
+												<div data-v-89147bcc="" class="van-button__content"><span
+														data-v-89147bcc="" class="van-button__text" >我已返校 - 销假</span>
+												</div>
+											</button>
+											<!---->
+											<!---->
+										</div>
+										<div data-v-89147bcc="" class="gxqtlist-item__opt-li"><button data-v-89147bcc=""
+												class="van-button van-button--info van-button--small van-button--plain van-button--hairline van-hairline--surround"
+												style="color: rgb(88, 88, 88); border-color: rgb(88, 88, 88);"
+												onclick="window.location.href='dianziqingjia.html'">
+												<div data-v-89147bcc="" class="van-button__content"><span
+														data-v-89147bcc="" class="van-button__text">电子请假单</span>
+												</div>
+											</button></div>
+									</div>
+								</div>
+								<script>
+									document.getElementById("name").innerHTML = localStorage.getItem("name");
+									document.getElementById("number").innerHTML = localStorage.getItem("number") + "&nbsp;&nbsp";
+									document.getElementById("reason").innerHTML = "[" + localStorage.getItem("type") + "]" + localStorage.getItem(
+										"reason");
+									document.getElementById("cla").innerHTML = localStorage.getItem("major") + "  " + localStorage.getItem("cla");
+									document.getElementById("startTime").innerHTML = localStorage.getItem("startTime");
+									document.getElementById("endTime").innerHTML = localStorage.getItem("endTime") + " (请假1天)";
+									document.getElementById("tel").innerText = localStorage.getItem("tel");
+								</script>
+								<div class="van-list__finished-text">没有更多了</div>
+								<div class="van-list__placeholder"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---->
+			</div>
+		</div>
+		<div id = "xiaojiadiv"></div>
+		<!-- <div class="van-overlay " style="z-index: 2001;" id = "xiaojiaover"></div>
+		<div role="dialog" class="van-dialog xiaojia" aria-labelledby="提示" style="z-index: 2002;" id = "xiaojia">
+			<div class="van-dialog__header">提示</div>
+			<div class="van-dialog__content">
+				<div class="van-dialog__message van-dialog__message--has-title">确定请假结束已到校，现在要销假?</div>
+			</div>
+			<div class="van-hairline--top van-dialog__footer"><button
+					class="van-button van-button--default van-button--large van-dialog__cancel" onclick="cancelxiaojia()">
+					<div class="van-button__content"><span class="van-button__text">取消</span></div>
+				</button><button
+					class="van-button van-button--default van-button--large van-dialog__confirm van-hairline--left"  onclick="xiaojia()">
+					<div class="van-button__content"><span class="van-button__text">确认</span></div>
+				</button></div>
+		</div> -->
+		
+		<script>
+			function xiaojia(){
+				var div = document.getElementsByClassName("gxqtlist-item");
+				for(i = 0 ; i<div.length;i++)
+				{
+					div[i].setAttribute("style","display: none;");
+				}
+				
+				document.getElementById("xiaojia").setAttribute("style","display: none;");
+				document.getElementById("xiaojiaover").setAttribute("style","display: none;");
+			}
+			function xiaojiadiv(){
+				document.getElementById("xiaojiadiv").innerHTML="<div class='van-overlay ' style='z-index: 2001;' id = 'xiaojiaover'></div><div role='dialog' class='van-dialog xiaojia' aria-labelledby='提示' style='z-index: 2002;' id = 'xiaojia'><div class='van-dialog__header'>提示</div><div class='van-dialog__content'><div class='van-dialog__message van-dialog__message--has-title'>确定请假结束已到校，现在要销假?</div></div><div class='van-hairline--top van-dialog__footer'><button class='van-button van-button--default van-button--large van-dialog__cancel' onclick='cancelxiaojia()'><div class='van-button__content'><span class='van-button__text'>取消</span></div></button><button class='van-button van-button--default van-button--large van-dialog__confirm van-hairline--lef'  onclick='xiaojia()'><div class='van-button__content'><span class='van-button__text'>确认</span></div></button></div></div>"
+				// document.getElementById("xiaojia").setAttribute("style","display: block;");
+				// window.event.cancelBubble = true; 
+
+			}
+			function add(){
+				var hint = document.getElementById('headermenulist');
+				if(hint.style.display = "none"){
+					hint.style.display = "block";
+				}
+				else{
+					hint.style.display = "none";
+				}
+				
+			}
+			function cancelxiaojia(){
+				document.getElementById("xiaojia").setAttribute("style","display: none;");
+				document.getElementById("xiaojiaover").setAttribute("style","display: none;");
+			}
+		</script>
+		<!---->
+		<!---->
+		<!---->
+		<!---->
+	</body>
+</html>
