@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0113)http://sztoutiao.shzu.edu.cn/rcsw_gxqtQingJialist/rcsw_gxqtQingJiaDanview?dataId=b813aad417494931b254e088cb7ff92d -->
+<html lang="en" style="font-size: 39.9px;">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+		<link rel="icon" href="http://sztoutiao.shzu.edu.cn/favicon.ico">
+		<title>石大头条</title>
+		<link href="qingjia/chunk-vendors.ffaf8156.css" rel="stylesheet">
+		<link href="qingjia/app.4be6ac44.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-76f8b28a.ac104f2f.css">
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-7fe0b63a.9f3978e8.css">
+
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-60f9720e.6b71fe4c.css">
+
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-3c432688.b6fb9269.css">
+
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-713d77da.4a0b686a.css">
+
+		<link rel="stylesheet" type="text/css" href="qingjia/chunk-11824fde.0a7524ba.css">
+
+
+	</head>
+	<body style="font-size: 24px;" class=""><noscript><strong>We're sorry but 石大头条 doesn't work properly without
+				JavaScript enabled. Please enable it to continue.</strong></noscript>
+		<div id="app">
+			<div data-v-89147bcc="" id="gxqtlist">
+	
+				<div data-v-66ec45e6="" data-v-89147bcc="" id="gxqtform">
+					<header data-v-66ec45e6="" class="mainHeader">
+						<div class="top_bar">
+							<div class="abs_l" onclick="window.location.href='qingjiajilu.html'"><a data-v-66ec45e6="" class="icon-back"></a></div>
+							<div class="abs_m">电子请假单</div>
+							<div class="abs_r">
+								<!---->
+								<ul id="headermenulist" class="menulist" style="display: none;"></ul>
+							</div>
+						</div>
+					</header>
+					<div data-v-66ec45e6="" class="gxqtform-content">
+						<div data-v-66ec45e6="" class="gxqtlist-item">
+							<div data-v-66ec45e6="" class="gxqtlist-item__img"><img id = "photo" data-v-66ec45e6=""
+									src="../../sztoutiao.shzu.edu.cn/img/userdefaulthead.40a36271.png"></div>
+							<div data-v-66ec45e6="" class="qj_status"
+								style="color: rgb(16, 128, 1); font-weight: bold;">审核通过</div>
+							<div data-v-66ec45e6="" class="now_time" id="now_time">2021年6月14日 星期一 17:24:57</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">姓名</span></div>
+								<div data-v-66ec45e6="" class="van-cell__value"><span data-v-66ec45e6=""
+										id="name"></span>
+								</div>
+							</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">学号</span></div>
+								<div data-v-66ec45e6="" class="van-cell__value"><span data-v-66ec45e6=""
+										id="number"></span></div>
+							</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">班级</span></div>
+								<div data-v-66ec45e6="" class="van-cell__value large-val"><span data-v-66ec45e6=""
+										id="cla"></span></div>
+							</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">原因</span></div>
+								<div data-v-66ec45e6="" class="van-cell__value large-val"><span data-v-66ec45e6=""
+										id="reason"></span></div>
+							</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">请假时间起</span>
+								</div>
+								<div data-v-66ec45e6="" class="van-cell__value date-style"><span data-v-66ec45e6=""
+										id="startTime"></span></div>
+							</div>
+							<div data-v-66ec45e6="" class="van-cell van-cell--large">
+								<div data-v-66ec45e6="" class="van-cell__title"><span data-v-66ec45e6="">请假时间止</span>
+								</div>
+								<div data-v-66ec45e6="" class="van-cell__value date-style"><span data-v-66ec45e6=""
+										id="endTime"></span></div>
+							</div>
+							<script>
+								document.getElementById("name").innerHTML = localStorage.getItem("name");
+								document.getElementById("number").innerHTML = localStorage.getItem("number");
+								// document.getElementById("reason").innerHTML = "[" + localStorage.getItem("type") + "]" + localStorage.getItem(
+								// 	"reason");
+								document.getElementById("reason").innerHTML = localStorage.getItem(
+									"reason") + "(" + localStorage.getItem("type") + ")" + " 请假1天";
+								document.getElementById("cla").innerHTML = localStorage.getItem("academic") + "-" + localStorage.getItem(
+									"major") + "-" + localStorage.getItem("cla");
+								document.getElementById("startTime").innerHTML = localStorage.getItem("startTime");
+								document.getElementById("endTime").innerHTML = localStorage.getItem("endTime");
+								var src = "./images/" + localStorage.getItem("number") + ".jpg";
+								document.getElementById("photo").setAttribute("src", src);
+							</script>
+			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			showtime();
+
+			function showtime() {
+
+				var today, hour, second, minute, year, month, date;
+				var strDate;
+				today = new Date();
+				var n_day = today.getDay();
+				switch (n_day) {
+					case 0: {
+						strDate = "星期日";
+					}
+					break;
+				case 1: {
+					strDate = "星期一";
+				}
+				break;
+				case 2: {
+					strDate = "星期二";
+				}
+				break;
+				case 3: {
+					strDate = "星期三";
+				}
+				break;
+				case 4: {
+					strDate = "星期四";
+				}
+				break;
+				case 5: {
+					strDate = "星期五";
+				}
+				break;
+				case 6: {
+					strDate = "星期六";
+				}
+				break;
+				case 7: {
+					strDate = "星期日";
+				}
+				break;
+				}
+				year = today.getYear() + 1900;
+				month = today.getMonth() + 1;
+				ndate = today.getDate();
+				hour = today.getHours();
+				minute = today.getMinutes();
+				second = today.getSeconds();
+				var str = "";
+				var color = "green";
+				str += year + "年" + month + "月" + ndate +
+					"日 " + strDate + "   ";
+				if (hour < 10) {
+					str += "0";
+				}
+				str += (hour+":");
+				if (minute < 10) {
+					str += "0";
+				}
+				str += (minute+":");
+				if (second < 10) {
+					str += "0";
+				}
+				str +=second;
+
+
+				document.getElementById("now_time").innerHTML = str;
+				setTimeout("showtime();", 1000); //设定函数自动执行时间为 1000 ms(1 s)
+			}
+		</script>
+		
+		
+	</body>
+</html>
